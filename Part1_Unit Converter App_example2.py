@@ -41,7 +41,6 @@ if st.button("Convert ⚡"):
     else:
       c = value - 273.15
       result = f"{value} K = **{c:.2f} °C** = **{c * 9/5 + 32:.2f}
-
 °F**"
       formula = "°C = K − 273.15"
     elif category == "Weight":
