@@ -76,7 +76,7 @@ if st.button("Convert ⚡"):
 
 12:.4f} ft**"
           formula = "m = in / 39.37"
-          st.success(f"✅ {result}")
-          if show_formula:
-            st.markdown(f"**Formula:** {formula}")
-            st.code(formula, language="text")
+  st.success(f"✅ {result}")
+  if show_formula:
+    st.markdown(f"**Formula:** {formula}")
+    st.code(formula, language="text")
