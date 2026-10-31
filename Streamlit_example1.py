@@ -18,21 +18,17 @@ major = st.selectbox("Major", ["AI", "Computer Science", "Engineering",
 "Mathematics"])
 gpa = st.number_input("GPA (out of 4.0)", 0.0, 4.0, 3.0, step=0.1)
 hobby = st.radio("Favourite hobby", ["Reading", "Coding", "Sports", "Art"])
-Streamlit Assignment — Examples 01–03
-
-Page 1 of 6
-
 bio = st.text_area("Short bio (2–3 sentences)")
 ready = st.checkbox("I am ready to generate my card")
 # ── Reaction ──────────────────────────────────────────────────
 if st.button("Generate Card 🪪"):
-if not ready:
-st.warning("Please tick the checkbox first.")
-elif not name.strip():
-st.error("Please enter your name.")
-else:
-st.success(f"✅ Card generated for **{name}**!")
-st.markdown(f"""
+  if not ready:
+    st.warning("Please tick the checkbox first.")
+  elif not name.strip():
+    st.error("Please enter your name.")
+  else:
+    st.success(f"✅ Card generated for **{name}**!")
+    st.markdown(f"""
 | Field | Value |
 |--------|-------|
 | Name | {name} |
@@ -42,5 +38,4 @@ st.markdown(f"""
 | Hobby | {hobby} |
 > *{bio}*
 """)
-
-st.code(f'st.write("Hello, {name}!")', language="python")
+    st.code(f'st.write("Hello, {name}!")', language="python")
