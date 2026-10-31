@@ -40,37 +40,36 @@ if st.button("Convert ⚡"):
       formula = "°C = (°F − 32) × 5/9"
     else:
       c = value - 273.15
-      result = f"{value} K = **{c:.2f} °C** = **{c * 9/5 + 32:.2f} 
-°F**" 
+      result = f"{value} K = **{c:.2f} °C** = **{c * 9/5 + 32:.2f} °F**" 
       formula = "°C = K − 273.15"
     elif category == "Weight":
-      if unit == "Kilograms":
+    if unit == "Kilograms":
         result = f"{value} kg = **{value * 2.205:.3f} lb** = **{value *
 
 35.274:.2f} oz**"
         formula = "lb = kg × 2.205 | oz = kg × 35.274"
-      elif unit == "Pounds":
+    elif unit == "Pounds":
         result = f"{value} lb = **{value / 2.205:.3f} kg** = **{value *
 
 16:.2f} oz**"
         formula = "kg = lb / 2.205 | oz = lb × 16"
-      else:
+    else:
         result = f"{value} oz = **{value / 35.274:.4f} kg** = **{value /
 
 16:.4f} lb**"
         formula = "kg = oz / 35.274"
-      else:
+    else:
         if unit == "Metres":
           result = f"{value} m = **{value * 3.281:.3f} ft** = **{value *
 
 39.37:.2f} in**"
           formula = "ft = m × 3.281 | in = m × 39.37"
-        elif unit == "Feet":
+      elif unit == "Feet":
           result = f"{value} ft = **{value / 3.281:.4f} m** = **{value *
 
 12:.2f} in**"
           formula = "m = ft / 3.281 | in = ft × 12"
-        else:
+      else:
           result = f"{value} in = **{value / 39.37:.4f} m** = **{value /
 
 12:.4f} ft**"
